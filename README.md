@@ -1,20 +1,69 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# OMR Evaluation Platform
 
-# Run and deploy your AI Studio app
+A comprehensive system for processing and evaluating Optical Mark Recognition (OMR) sheets with high accuracy and scalability.
 
-This contains everything you need to run your app locally.
+## 🏗️ System Architecture
 
-View your app in AI Studio: https://ai.studio/apps/drive/16sZs3_MLVN9_lerJoR8ANPrW0R_-4qOo
+### Core Components
+- **Backend API**: FastAPI-based REST API for image processing and scoring
+- **ML Pipeline**: CNN-based bubble classification with OpenCV preprocessing
+- **Frontend Dashboard**: React-based web interface for uploads and results
+- **Database**: PostgreSQL for data persistence and audit trails
+- **Reporting**: PDF generation and analytics dashboard
 
-## Run Locally
+### Scalability Features
+- Horizontal scaling with load balancers
+- Redis caching for template data
+- Queue-based processing for high-volume uploads
+- CDN for static assets and processed images
 
-**Prerequisites:**  Node.js
+## 📁 Project Structure
 
+```
+omr-platform/
+├── backend/                 # FastAPI backend
+├── frontend/               # React frontend
+├── ml_models/              # CNN models and training
+├── database/               # Database schemas and migrations
+├── docs/                   # Documentation
+├── tests/                  # Test suites
+└── docker/                 # Docker configurations
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Quick Start
+
+1. **Backend Setup**:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   uvicorn main:app --reload
+   ```
+
+2. **Frontend Setup**:
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
+
+3. **Database Setup**:
+   ```bash
+   docker-compose up -d postgres redis
+   ```
+
+## 📊 Performance Targets
+
+- **Throughput**: 3000+ sheets per exam day
+- **Accuracy**: <0.5% error tolerance
+- **Response Time**: <2s per sheet processing
+- **Availability**: 99.9% uptime
+
+## 🔧 Key Features
+
+- Mobile camera support with lighting correction
+- Multiple template version support
+- Human-in-the-loop review system
+- Real-time processing status
+- Comprehensive audit logging
+- Bulk export capabilities
+
