@@ -1,4 +1,4 @@
-# OMR Evaluation Platform
+# OMR Evaluation Platform By Epic Bytes
 
 A comprehensive system for processing and evaluating Optical Mark Recognition (OMR) sheets with high accuracy and scalability.
 
